@@ -88,8 +88,18 @@ function canQueenCaptureKing(/* queen, king */) {
  *  2, 2, 5   => false
  *  3, 0, 3   => false
  */
-function isIsoscelesTriangle(/* a, b, c */) {
-  throw new Error('Not implemented');
+function isIsoscelesTriangle(a, b, c) {
+  let result;
+  if (a === b && a + b > c && c !== 0) {
+    result = true;
+  } else if (a === c && a + c > b && b !== 0) {
+    result = true;
+  } else if (b === c && b + c > a && a !== 0) {
+    result = true;
+  } else {
+    result = false;
+  }
+  return result;
 }
 
 /**
